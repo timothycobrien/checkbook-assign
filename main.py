@@ -20,7 +20,7 @@ def handle():
     body_args = body.split(' ')
     # splitting at space [send, amount, to, name, (email), for, description]
     # need to flatten body_args[6..] into one entry
-    body_args[6] = ''.join(body_args[6:])
+    body_args[6] = ' '.join(body_args[6:])
     header = {"content-type": "application/json", "accept": "application/json", "authorization": AUTH}
     
     # literal_eval needed to interface with api with number literal
